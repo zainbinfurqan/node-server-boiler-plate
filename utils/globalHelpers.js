@@ -1,6 +1,5 @@
 const { v4: uuidv4 } = require("uuid");
 const mongoose = require("mongoose");
-const notification = require("../models/notification");
 
 const globalHelpers = {};
 
@@ -88,9 +87,9 @@ globalHelpers.isValidObjectId = function (id) {
 };
 
 
-globalHelpers.postNotification = async function (body) {
-  const createNotification = new notification(body);
-  return createNotification.save();
-}
+// globalHelpers.postNotification = async function (body) {
+//   const createNotification = new notification(body);
+//   return createNotification.save();
+// }
 
 module.exports = globalHelpers;
