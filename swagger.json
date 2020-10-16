@@ -1,0 +1,695 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Hospital Care Managment",
+    "description": "Hospital Care Managment API Doc",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:3000",
+  "basePath": "/api",
+  "tags": [
+    {
+      "name": "Users",
+      "description": "API for users in the system"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/users": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "description": "Create new user in system",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "User that we want to create",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "New user is created",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Get all users from system",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Users"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Users"
+        ],
+        "description": "Update new user in system",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "User that we want to Update",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "user is Update",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Users"
+        ],
+        "description": "delete  user in system",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "User that we want to delete",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "user is deleted",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      }
+    },
+    "/hospital": {
+      "post": {
+        "tags": [
+          "Hospital"
+        ],
+        "description": "Create new hospital in system",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "Hospital that we want to create",
+            "schema": {
+              "$ref": "#/definitions/Hospital"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "New hospital is created",
+            "schema": {
+              "$ref": "#/definitions/Hospital"
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Hospital"
+        ],
+        "summary": "Get all hospitals from system",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Hospital"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Hospital"
+        ],
+        "description": "Update hospital in system",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "Hospital that we want to update",
+            "schema": {
+              "$ref": "#/definitions/Hospital"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Hospital is updated",
+            "schema": {
+              "$ref": "#/definitions/Hospital"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Hospital"
+        ],
+        "description": "delete hospital in system",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "Hospital that we want to delete",
+            "schema": {
+              "$ref": "#/definitions/Hospital"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Hospital is Delete",
+            "schema": {
+              "$ref": "#/definitions/Hospital"
+            }
+          }
+        }
+      }
+    },
+    "/category": {
+      "post": {
+        "tags": [
+          "Category"
+        ],
+        "description": "Create new Category in system",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "Category that we want to create",
+            "schema": {
+              "$ref": "#/definitions/Category"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "New Category is created",
+            "schema": {
+              "$ref": "#/definitions/Category"
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Category"
+        ],
+        "summary": "Get all Category from system",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Category"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Category"
+        ],
+        "description": "update Category in system",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "Category that we want to update",
+            "schema": {
+              "$ref": "#/definitions/Category"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Category is updated",
+            "schema": {
+              "$ref": "#/definitions/Category"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Category"
+        ],
+        "description": "delete Category from system",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "Category that we want to deleted",
+            "schema": {
+              "$ref": "#/definitions/Category"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Category is deleted",
+            "schema": {
+              "$ref": "#/definitions/Category"
+            }
+          }
+        }
+      }
+    },
+    "/chatroom": {
+      "post": {
+        "tags": [
+          "Chat"
+        ],
+        "description": "Create new chat room",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "Chat Room that we want to create",
+            "schema": {
+              "$ref": "#/definitions/Chat"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "New ChatRoom is created",
+            "schema": {
+              "$ref": "#/definitions/Chat"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Chat"
+        ],
+        "description": "delete Chat from system",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "ChatRoom that we want to delete",
+            "schema": {
+              "$ref": "#/definitions/Chat"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "ChatRoom is deleted",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      }
+    },
+    "/chatmessage": {
+      "post": {
+        "tags": [
+          "Message"
+        ],
+        "description": "Send Mesage",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/Message"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Mesasge has been send",
+            "schema": {
+              "$ref": "#/definitions/Message"
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Message"
+        ],
+        "summary": "Get all Message from system",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Message"
+            }
+          }
+        }
+      }
+    },
+    "/doc": {
+      "get": {
+        "tags": [
+          "Search Doc"
+        ],
+        "summary": "get doc list on basis of provided params",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Category"
+            }
+          }
+        }
+      }
+    },
+    "/calling": {
+      "post": {
+        "tags": [
+          "Calling Doc"
+        ],
+        "summary": "api for call initiate",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/calling"
+            }
+          }
+        }
+      }
+    },
+    "/recalling": {
+      "post": {
+        "tags": [
+          "Calling Doc"
+        ],
+        "summary": "api for call reinitiate",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/calling"
+            }
+          }
+        }
+      }
+    },
+    "/waiting": {
+      "post": {
+        "tags": [
+          "Query System"
+        ],
+        "summary": "api for call reinitiate",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/query"
+            }
+          }
+        }
+      }
+    },
+    "/docassginreport": {
+      "post": {
+        "tags": [
+          "Report System"
+        ],
+        "summary": "api for call reinitiate",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/query"
+            }
+          }
+        }
+      }
+    },
+    "/reports{userId}": {
+      "get": {
+        "tags": [
+          "Report System"
+        ],
+        "summary": "api for call reinitiate",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/query"
+            }
+          }
+        }
+      }
+    },
+    "/reports": {
+      "post": {
+        "tags": [
+          "Report System"
+        ],
+        "summary": "api for call reinitiate",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/query"
+            }
+          }
+        }
+      }
+    },
+    "/commentreport": {
+      "put": {
+        "tags": [
+          "Report System"
+        ],
+        "summary": "api for call reinitiate",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/query"
+            }
+          }
+        }
+      }
+    },
+    "/systemreport": {
+      "post": {
+        "tags": [
+          "System Reports for admin only"
+        ],
+        "description": "Create new Report in system",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "Category that we want to create",
+            "schema": {
+              "$ref": "#/definitions/Reports"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "New Category is created",
+            "schema": {
+              "$ref": "#/definitions/Category"
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "System Reports for admin only"
+        ],
+        "summary": "Get all Reports from system",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Reports"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "System Reports for admin only"
+        ],
+        "description": "update Report in system",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "Report that we want to update",
+            "schema": {
+              "$ref": "#/definitions/Reports"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Category is updated",
+            "schema": {
+              "$ref": "#/definitions/Category"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "System Reports for admin only"
+        ],
+        "description": "delete Report from system",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "Report that we want to deleted",
+            "schema": {
+              "$ref": "#/definitions/Reports"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Category is deleted",
+            "schema": {
+              "$ref": "#/definitions/Category"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "User": {
+      "required": [
+        "firstName",
+        "lastName",
+        "email",
+        "password",
+        "phoneNo",
+        "role",
+        "gender",
+        "accountType",
+        "category"
+      ],
+      "properties": {
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string",
+          "uniqueItems": true
+        },
+        "password": {
+          "type": "string"
+        },
+        "phoneNo": {
+          "type": "string",
+          "uniqueItems": true
+        },
+        "role": {
+          "type": "string"
+        },
+        "gender": {
+          "type": "string"
+        },
+        "accountType": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        }
+      }
+    },
+    "Users": {
+      "type": "array",
+      "$ref": "#/definitions/User"
+    }
+  }
+}
